@@ -1,3 +1,6 @@
+import Swiper from "swiper";
+import 'swiper/css';
+
 const parseJSON = async (url) => {
     const response = await fetch(url)
     return response.json()
@@ -14,6 +17,7 @@ const swiperComponent = (data, component) => {
     `
 }
 
+//betesszuk a kepek nevet es cimet
 const swiperSlideComponent = ({filename, title}) => {
     return `
         <div class="swiper-slide">

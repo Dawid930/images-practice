@@ -14,6 +14,7 @@ app.get('/', (req, res, next) => {
 }),
 
 app.use('/public', express.static(`${__dirname}/../frontend/public`)); //public mappa kiszolg
+app.use('/dist', express.static(`${__dirname}/../frontend/dist`)); //public mappa kiszolg
 
 app.get('/image-list', (req, res, next) => {
     res.sendFile(path.join(`${__dirname}/../frontend/data.json`)); 
